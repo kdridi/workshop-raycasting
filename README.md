@@ -381,7 +381,7 @@ rect(i * rectW + rectW / 2, rectH / 2, rectW, wallH)
 
 ---
 
-# Chargement de la carte
+### Chargement de la carte
 
 Nous allons maintenant charger la carte. Pour cela, nous allons:
 
