@@ -69,6 +69,8 @@ const screen = {
 }
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/bGYdeLG)
+
 ---
 
 ### Dessiner les contours de la scène
@@ -107,6 +109,8 @@ function drawSegment([p0, p1]) {
 	// TODO: dessiner le segment
 }
 ```
+
+[Voir sur CodePen](https://codepen.io/kdridi/embed/NWwqrJx)
 
 ---
 
@@ -159,6 +163,8 @@ function mouseMoved() {
 	player.ang = 0 // TODO: remplacer 0 par l'angle du player en utilisant Math.atan2()
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/oNoXLRQ)
+
 ---
 
 ### Calculer et afficher les intersections
@@ -200,6 +206,8 @@ const intersectionRays = rayCast(ray)
 // TODO: dessiner les segments obtenus avec la fonction drawIntersectionRay()
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/dyZoXBa)
+
 ---
 
 ### Filtrer les intersections
@@ -218,6 +226,8 @@ Nous allons désormais ne considérer que les intersections les plus proches du 
 // TODO: modifier la fonction rayCast()
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/Exbjgye)
+
 ---
 
 ### Envoyer plusieurs rayons
@@ -233,6 +243,8 @@ rays.push(getRay(0 + 0.0, 10))
 rays.push(getRay(0 + 0.5, 10))
 // TODO: envoyer plusieurs rayons et afficher les intersections obtenues
 ```
+
+[Voir sur CodePen](https://codepen.io/kdridi/embed/bGYRLjM)
 
 ---
 
@@ -273,6 +285,8 @@ const rays = arcs.map((arc) => {
 })
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/abVwqaz)
+
 ---
 
 ### Splitter l'écran en deux
@@ -284,6 +298,14 @@ Nous allons maintenant splitter l'écran en deux. La partie haute affichera la s
 ```js
 screen.h = height / 2
 ```
+
+[Voir sur CodePen](https://codepen.io/kdridi/embed/abVwqRO)
+
+---
+
+### Afficher la scène en vue FPS
+
+Nous allons afficher les murs en choisissant la couleur en fonction de la distance entre le player et le mur. Pour cela, nous allons:
 
 - Modifier la fonction **mouseMoved()** afin de bouger la position du player au lieu de la direction;
 
@@ -326,6 +348,8 @@ intersections.forEach((intersection, i) => {
 })
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/zYPzRMY)
+
 ---
 
 ### Amélioration du rendu
@@ -352,6 +376,8 @@ const wallH = min(rectH, (rectH * 100) / (dist * cos(arc)))
 fill(wallC)
 rect(i * rectW + rectW / 2, rectH / 2, rectW, wallH)
 ```
+
+[Voir sur CodePen](https://codepen.io/kdridi/embed/RwjgQqg)
 
 ---
 
@@ -382,6 +408,8 @@ for (const segment of segments) {
 }
 ```
 
+[Voir sur CodePen](https://codepen.io/kdridi/embed/zYPzRyY)
+
 ---
 
 ### Dessiner le sol et le ciel
@@ -401,6 +429,8 @@ rect(width / 2, (1 * rectH) / 4, width, rectH / 2)
 fill(80, 160, 80)
 rect(width / 2, (3 * rectH) / 4, width, rectH / 2)
 ```
+
+[Voir sur CodePen](https://codepen.io/kdridi/embed/ExbXQrj)
 
 ---
 
@@ -481,3 +511,5 @@ function mouseMoved() {
 	player.ang = mouseX / 100
 }
 ```
+
+[Voir sur CodePen](https://codepen.io/kdridi/embed/GROEQzO)
